@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div component-name=""></div>
+
+<script src="node_modules/angular/angular.js"></script>
+<script src="jspm_packages/system.js"></script>
+<script src="config.js"></script>
+<script>
+  System.import('./component/component.js').then(function (ref) {
+    angular.bootstrap(document.body, [ref.default.name]);
+  })
+</script>
+</body>
+</html>
