@@ -5,7 +5,6 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
-    "angular": "^1.5.8",
     "browser-sync": "^2.14.0",
     "gulp": "^3.9.1",
     "gulp-exec": "^2.1.2",
@@ -14,7 +13,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "jspm install",
-
     "start-dev": "node buildHelpers/start.dev.js",
     "jspm-link": "node buildHelpers/build.js && jspm link jspm:component@1.0.0 -y"
   },
@@ -22,6 +20,7 @@
   "license": "ISC",
   "jspm": {
     "dependencies": {
+      "angular": "github:angular/bower-angular@^1.5.8",
       "text": "github:systemjs/plugin-text@^0.0.8"
     },
     "devDependencies": {

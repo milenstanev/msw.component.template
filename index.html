@@ -7,12 +7,13 @@
 <body>
 <div component-name=""></div>
 
-<script src="node_modules/angular/angular.js"></script>
 <script src="jspm_packages/system.js"></script>
 <script src="config.js"></script>
 <script>
-  System.import('./index.js').then(function (reference) {
-    angular.bootstrap(document.body, [reference.default.name]);
+  System.import('angular').then(function (angular) {
+    System.import('./index.js').then(function (reference) {
+      angular.bootstrap(document.body, [reference.default.name]);
+    });
   });
 </script>
 </body>
