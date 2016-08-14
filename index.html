@@ -11,9 +11,9 @@
 <script src="jspm_packages/system.js"></script>
 <script src="config.js"></script>
 <script>
-  System.import('./component/component.js').then(function (ref) {
-    angular.bootstrap(document.body, [ref.default.name]);
-  })
+  System.import('./index.js').then(function (reference) {
+    angular.bootstrap(document.body, [reference.default.name]);
+  });
 </script>
 </body>
 </html>

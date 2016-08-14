@@ -1,5 +1,5 @@
 {
-  "name": "milenstanev/msw.component.template",
+  "name": "msw.component.template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,7 +15,7 @@
     "postinstall": "jspm install",
     "jspm-link": "node build.js && jspm link jspm:component@1.0.0 -y"
   },
-  "author": "Milen Stanev",
+  "author": "milenstanev",
   "license": "ISC",
   "jspm": {
     "dependencies": {

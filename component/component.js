@@ -1,5 +1,4 @@
 import componentHtml from './component.html!text';
-
 import ComponentCtrl from './ComponentCtrl.js';
 
 const component = angular.module('prefix.component', []);
@@ -27,5 +26,5 @@ component.directive('componentName', [
   }
 ]);
 
-export default component;
+export { component };
 
