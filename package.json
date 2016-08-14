@@ -6,14 +6,17 @@
   "dependencies": {},
   "devDependencies": {
     "angular": "^1.5.8",
-    "http-server": "^0.9.0",
+    "browser-sync": "^2.14.0",
+    "gulp": "^3.9.1",
+    "gulp-exec": "^2.1.2",
     "jspm": "^0.16.42"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./node_modules/.bin/http-server",
     "postinstall": "jspm install",
-    "jspm-link": "node build.js && jspm link jspm:component@1.0.0 -y"
+
+    "start-dev": "node buildHelpers/start.dev.js",
+    "jspm-link": "node buildHelpers/build.js && jspm link jspm:component@1.0.0 -y"
   },
   "author": "milenstanev",
   "license": "ISC",
