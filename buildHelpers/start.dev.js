@@ -9,7 +9,7 @@ const browserSync = require('browser-sync');
  */
 const baseUrl = '.';
 /**
- * Doing dev server
+ * dev server
  */
 browserSync.init({
   server: {

@@ -1,7 +1,4 @@
 import * as config from './config.js';
-import angular from 'angular';
-import 'angular-ui/ui-router';
-
 import './component.css!';
 import componentHtml from './component.html!text';
 import componentConfig from './component.config.js';
@@ -52,5 +49,5 @@ component.controller(`${config.COMPONENT_NAME}Svc`, ComponentSvc);
  */
 component.directive(`${config.NAMESPACE}${config.COMPONENT_NAME_caps}`, componentDirective);
 
-export { component };
+export { component as default };
 

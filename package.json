@@ -2,7 +2,7 @@
   "name": "msw.component.template",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "component.dist/component.js",
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.14.0",
@@ -35,3 +35,5 @@
     }
   }
 }
+
+
