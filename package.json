@@ -15,14 +15,16 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "jspm install",
     "start-dev": "node buildHelpers/start.dev.js",
-    "esdoc": "./node_modules/.bin/esdoc -c esdoc.json && open ./esdoc/index.html",
-    "jspm-link": "node buildHelpers/build.js && jspm link jspm:component@1.0.0 -y && npm run-script esdoc"
+    "jspm-link": "node buildHelpers/build.js && jspm link jspm:component@1.0.0 -y && npm run-script esdoc",
+    "esdoc": "./node_modules/.bin/esdoc -c esdoc.json",
+    "esdoc-show": "open ./esdoc/index.html"
   },
   "author": "milenstanev",
   "license": "ISC",
   "jspm": {
     "dependencies": {
       "angular": "github:angular/bower-angular@^1.5.8",
+      "angular-ui/ui-router": "github:angular-ui/ui-router@^0.3.1",
       "text": "github:systemjs/plugin-text@^0.0.8"
     },
     "devDependencies": {

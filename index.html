@@ -5,7 +5,24 @@
   <title>Title</title>
 </head>
 <body>
-<div component-name=""></div>
+
+<h1>Page example</h1>
+
+<h2>Without route</h2>
+<h3>With directive</h3>
+
+<div component-name></div>
+
+<hr>
+
+<h3>With controller and include</h3>
+<div ng-controller="componentCtrl as ctrl" ng-include="'componentHtml'"></div>
+
+<hr>
+
+<div ui-view></div>
+
+
 
 <script src="jspm_packages/system.js"></script>
 <script src="config.js"></script>

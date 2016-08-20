@@ -1,7 +1,14 @@
-import componentHtml from './component.html!text';
-import ComponentCtrl from './ComponentCtrl.js';
+import angular from 'angular';
+import 'angular-ui/ui-router';
 
-const component = angular.module('prefix.component', []);
+import componentConfig from './config/componentConfig.js';
+import componentHtml from './views/component.html!text';
+import ComponentCtrl from './controllers/ComponentCtrl.js';
+import componentDirective from './directives/componentDirective.js';
+
+const component = angular.module('prefix.component', [
+  'ui.router'
+]);
 
 component.run([
   '$templateCache',
@@ -10,21 +17,12 @@ component.run([
   }
 ]);
 
+//If it's necessary
+component.config(componentConfig);
+
 component.controller('componentCtrl', ComponentCtrl);
 
-component.directive('componentName', [
-  () => {
-    let directive = {
-      scope: true,
-      controllerAs: 'ctrl',
-
-      template: componentHtml,
-      controller: 'componentCtrl',
-    };
-
-    return directive;
-  }
-]);
+component.directive('componentName', componentDirective);
 
 export { component };
 
