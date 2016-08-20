@@ -2,7 +2,7 @@
 import * as env from './env.js';
 
 /**
- * @type {component.env}
+ * @type {env}
  */
 export * from './env.js';
 //endregion

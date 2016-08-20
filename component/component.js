@@ -1,14 +1,13 @@
-import * as config from './config/config.js';
+import * as config from './config.js';
 import angular from 'angular';
 import 'angular-ui/ui-router';
 
-import './assets/component.css!';
-import componentConfig from './config/componentConfig.js';
-import componentHtml from './views/component.html!text';
-import ComponentSvc from './services/ComponentSvc.js';
-import ComponentCtrl from './controllers/ComponentCtrl.js';
-import componentDirective from './directives/componentDirective.js';
-///console.log(config)
+import './component.css!';
+import componentHtml from './component.html!text';
+import componentConfig from './component.config.js';
+import ComponentSvc from './component.Svc.js';
+import ComponentCtrl from './component.Ctrl.js';
+import componentDirective from './component.directive.js';
 
 /**
  * Module Desc .etc

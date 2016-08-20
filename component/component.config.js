@@ -1,4 +1,4 @@
-function componentDirective($stateProvider, $urlRouterProvider) {
+function componentConfig($stateProvider, $urlRouterProvider) {
 
   //$urlRouterProvider.otherwise("/state1");
 
@@ -18,6 +18,6 @@ function componentDirective($stateProvider, $urlRouterProvider) {
     });*/
 }
 
-componentDirective.$inject = ['$stateProvider', '$urlRouterProvider'];
+componentConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-export default componentDirective;
+export default componentConfig;

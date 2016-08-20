@@ -1,5 +1,5 @@
-import componentHtml from '../views/component.html!text';
-import ComponentCtrl from '../controllers/ComponentCtrl.js';
+import componentHtml from './component.html!text';
+import ComponentCtrl from './component.Ctrl.js';
 
 function componentDirective() {
   let directive = {
