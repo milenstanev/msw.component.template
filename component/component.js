@@ -2,6 +2,7 @@ import * as config from './config/config.js';
 import angular from 'angular';
 import 'angular-ui/ui-router';
 
+import './assets/component.css!';
 import componentConfig from './config/componentConfig.js';
 import componentHtml from './views/component.html!text';
 import ComponentSvc from './services/ComponentSvc.js';
