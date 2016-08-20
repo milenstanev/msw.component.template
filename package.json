@@ -6,6 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.14.0",
+    "esdoc": "^0.4.8",
     "gulp": "^3.9.1",
     "gulp-exec": "^2.1.2",
     "jspm": "^0.16.42"
@@ -14,7 +15,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "jspm install",
     "start-dev": "node buildHelpers/start.dev.js",
-    "jspm-link": "node buildHelpers/build.js && jspm link jspm:component@1.0.0 -y"
+    "esdoc": "./node_modules/.bin/esdoc -c esdoc.json && open ./esdoc/index.html",
+    "jspm-link": "node buildHelpers/build.js && jspm link jspm:component@1.0.0 -y && npm run-script esdoc"
   },
   "author": "milenstanev",
   "license": "ISC",
