@@ -1,0 +1,1 @@
+export default from './component.dist/component.js';
