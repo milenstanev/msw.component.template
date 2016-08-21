@@ -13,7 +13,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "jspm install",
+    "postinstall": "jspm install -y",
     "start-dev": "node buildHelpers/start.dev.js",
     "jspm-link": "node buildHelpers/build.js && jspm link github:milenstanev/msw.component.template@1.0.1 -y && npm run-script esdoc",
     "esdoc": "./node_modules/.bin/esdoc -c esdoc.json",
