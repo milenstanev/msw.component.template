@@ -1,13 +1,8 @@
-//region Environment
-import * as env from './env.js';
-
 /**
- * @type {env}
+ * Name space of this component
+ * @type {string}
  */
-export * from './env.js';
-//endregion
-
-//region Component Name
+export const NAMESPACE = 'prefix';
 /**
  * Component name
  * @type {string}
@@ -18,4 +13,3 @@ export const COMPONENT_NAME = 'component';
  * @type {string}
  */
 export const COMPONENT_NAME_caps = 'Component';
-//endregion
