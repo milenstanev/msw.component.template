@@ -1,9 +1,9 @@
 class ComponentCtrl {
-  constructor() {
-    this.dataProvider = {};
+  constructor(componentSvc) {
+    this.dataProvider = componentSvc.dataProvider;
   }
 }
 
-ComponentCtrl.$inject = [];
+ComponentCtrl.$inject = ['componentSvc'];
 
 export default ComponentCtrl;
