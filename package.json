@@ -1,6 +1,6 @@
 {
   "name": "msw.component.template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "component.dist/component.js",
   "dependencies": {},
