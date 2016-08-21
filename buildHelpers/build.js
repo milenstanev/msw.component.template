@@ -17,8 +17,8 @@ const builder = new Builder(`${baseUrl}/`, `${baseUrl}/config.js`);
  */
 builder
   .buildStatic(
-    `${baseUrl}/component/component.js`,
-    `${baseUrl}/component.dist/component.js`,
+    `${baseUrl}/src/component.js`,
+    `${baseUrl}/src.compiled/component.js`,
     { minify: true, sourceMaps: true }
   ).then(function() {
     console.log('Build complete\n');

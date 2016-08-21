@@ -21,7 +21,7 @@ browserSync.init({
  * Here is proper place for postprocessing meta languages such as less
  */
 gulp.watch(
-  `${baseUrl}/component/**/*`
+  `${baseUrl}/src/**/*`
 ).on(
   'change',
   () => {

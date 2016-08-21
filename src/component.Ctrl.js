@@ -1,6 +1,6 @@
 class ComponentCtrl {
   constructor() {
-    this.data = 'Data';
+    this.dataProvider = {};
   }
 }
 
