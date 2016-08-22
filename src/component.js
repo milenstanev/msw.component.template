@@ -42,7 +42,7 @@ component.controller(`${config.COMPONENT_NAME}Ctrl`, ComponentCtrl);
 /**
  * Component main service
  */
-component.controller(`${config.COMPONENT_NAME}Svc`, ComponentSvc);
+component.service(`${config.COMPONENT_NAME}Svc`, ComponentSvc);
 
 /**
  * Component main directive
