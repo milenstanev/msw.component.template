@@ -1,3 +1,6 @@
+import angular from 'angular';
+import 'angular-ui/ui-router';
+
 import * as config from './config.js';
 import './component.css!';
 import componentHtml from './component.html!text';
