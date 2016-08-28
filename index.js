@@ -1,1 +1,1 @@
-export default from './src.compiled/component.js';
+export default from './src/component.dist.js';
