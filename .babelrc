@@ -1,7 +1,7 @@
 {
-  "presets": ["es2015"],
   "plugins": [
-    "transform-runtime",
-    "transform-es2015-modules-systemjs"
+    ["transform-es2015-modules-systemjs", {
+      "systemGlobal": "SystemJS"
+    }]
   ]
 }

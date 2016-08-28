@@ -1,5 +1,7 @@
 const fs = require('fs');
 const Builder = require('systemjs-builder');
+const gulp = require('gulp');
+const exec = require('gulp-exec');
 
 /**
  * Define baseUrl
@@ -15,11 +17,29 @@ const builder = new Builder(`${baseUrl}/`, `${baseUrl}/config.js`);
 /**
  * Executing the build
  */
+
+builder.config({
+  meta: {
+    'angular': {
+      build: false
+    },
+    'angular-ui/ui-router': {
+      build: false
+    }
+  }
+});
+
+
 builder
   .buildStatic(
-    `${baseUrl}/src/component.js`,
-    `${baseUrl}/src.compiled/component.js`,
-    { minify: true, sourceMaps: true }
+    `${baseUrl}/index.js`,
+    `${baseUrl}/index.dist.js`,
+    {
+      minify: false,
+      sourceMaps: false,
+      format: 'esm',
+      runtime: false
+    }
   ).then(function() {
     console.log('Build complete\n');
   })
