@@ -37,7 +37,7 @@ builder
     {
       minify: false,
       sourceMaps: false,
-      format: 'esm',
+      format: 'amd', //cjs
       runtime: false
     }
   ).then(function() {

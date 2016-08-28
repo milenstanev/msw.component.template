@@ -368,7 +368,5 @@ $__System.register('1', ['f'], function (_export) {
 ("body{color:#3f3f3f}");
 })
 (function(factory) {
-  main = factory();
+  define(["angular-ui/ui-router","angular"], factory);
 });
-
-export default main;
