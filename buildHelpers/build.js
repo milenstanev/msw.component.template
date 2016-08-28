@@ -14,9 +14,6 @@ const baseUrl = '.';
  * Configure builder paths
  */
 const builder = new Builder(`${baseUrl}/`, `${baseUrl}/config.js`);
-/**
- * Executing the build
- */
 
 builder.config({
   meta: {
@@ -35,9 +32,9 @@ builder
     `${baseUrl}/index.js`,
     `${baseUrl}/index.dist.js`,
     {
-      minify: false,
-      sourceMaps: false,
-      format: 'amd', //cjs
+      minify: true,
+      sourceMaps: true,
+      format: 'amd', //cjs // es6 without bundle
       runtime: false
     }
   ).then(function() {
