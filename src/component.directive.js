@@ -1,18 +1,19 @@
 import componentHtml from './component.html!text';
 import ComponentCtrl from './component.Ctrl.js';
 
-function componentDirective() {
+function componentDirective () {
   let directive = {
     scope: true,
     controllerAs: 'ctrl',
 
     template: componentHtml,
-    controller: ComponentCtrl,
-  };
+    controller: ComponentCtrl
+  }
 
-  return directive;
+  return directive
 }
 
-componentDirective.$inject = [];
+componentDirective.$inject = []
 
-export default componentDirective;
+export default componentDirective
+
