@@ -1,3 +1,4 @@
-<div ng-if="ctrl.dataProvider.length">
-  {{ctrl.dataProvider}}
+<div ng-if="ctrl.dataProvider.length"
+     ng-repeat="item in ctrl.dataProvider">
+  {{ item.prop }}
 </div>
