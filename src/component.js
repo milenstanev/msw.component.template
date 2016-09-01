@@ -50,7 +50,7 @@ component.service(`${config.COMPONENT_NAME}Svc`, ComponentSvc)
 /**
  * Component main directive
  */
-component.directive(`${config.NAMESPACE}${config.COMPONENT_NAME_caps}`, componentDirective)
+component.directive(`${config.NAMESPACE}${config.COMPONENT_NAME_CAPS}`, componentDirective)
 
 export { component as default }
 
