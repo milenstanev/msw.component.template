@@ -1,17 +1,17 @@
-import ComponentDataModel from './component.DataModel.js';
+import ComponentDataModel from './component.DataModel.js'
 
 class ComponentSvc {
-  constructor() {
-    this.dataProvider = [];
+  constructor () {
+    this.dataProvider = []
 
-    this.init();
+    this.init()
   }
 
-  init() {
-    this.dataProvider.push(new ComponentDataModel());
+  init () {
+    this.dataProvider.push(new ComponentDataModel())
   }
 }
 
-ComponentSvc.$inject = [];
+ComponentSvc.$inject = []
 
-export default ComponentSvc;
+export default ComponentSvc

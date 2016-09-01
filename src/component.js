@@ -1,13 +1,13 @@
-import angular from 'angular';
-import 'angular-ui/ui-router';
+import angular from 'angular'
+import 'angular-ui/ui-router'
 
-import * as config from './config.js';
-import './component.css!';
-import componentHtml from './component.html!text';
-import componentConfig from './component.config.js';
-import ComponentSvc from './component.Svc.js';
-import ComponentCtrl from './component.Ctrl.js';
-import componentDirective from './component.directive.js';
+import * as config from './config.js'
+import './component.css!'
+import componentHtml from './component.html!text'
+import componentConfig from './component.config.js'
+import ComponentSvc from './component.Svc.js'
+import ComponentCtrl from './component.Ctrl.js'
+import componentDirective from './component.directive.js'
 
 /**
  * Module Desc .etc
@@ -15,12 +15,12 @@ import componentDirective from './component.directive.js';
  */
 const component = angular.module(`${config.NAMESPACE}.${config.COMPONENT_NAME}`, [
   'ui.router'
-]);
+])
 
 /**
  * Component config
  */
-component.constant(`${config.COMPONENT_NAME}Config`, config);
+component.constant(`${config.COMPONENT_NAME}Config`, config)
 
 /**
  * Component run
@@ -28,29 +28,29 @@ component.constant(`${config.COMPONENT_NAME}Config`, config);
 component.run([
   '$templateCache',
   ($templateCache) => {
-    $templateCache.put(`${config.COMPONENT_NAME}Html`, componentHtml);
+    $templateCache.put(`${config.COMPONENT_NAME}Html`, componentHtml)
   }
-]);
+])
 
 /**
  * routes If it's necessary
  */
-component.config(componentConfig);
+component.config(componentConfig)
 
 /**
  * Component main ctrl
  */
-component.controller(`${config.COMPONENT_NAME}Ctrl`, ComponentCtrl);
+component.controller(`${config.COMPONENT_NAME}Ctrl`, ComponentCtrl)
 
 /**
  * Component main service
  */
-component.service(`${config.COMPONENT_NAME}Svc`, ComponentSvc);
+component.service(`${config.COMPONENT_NAME}Svc`, ComponentSvc)
 
 /**
  * Component main directive
  */
-component.directive(`${config.NAMESPACE}${config.COMPONENT_NAME_caps}`, componentDirective);
+component.directive(`${config.NAMESPACE}${config.COMPONENT_NAME_caps}`, componentDirective)
 
-export { component as default };
+export { component as default }
 

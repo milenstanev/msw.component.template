@@ -1,5 +1,5 @@
 export default class ComponentDataModel {
-  constructor() {
-    this.prop = 'Property Changed';
+  constructor () {
+    this.prop = 'Property Changed'
   }
 }
