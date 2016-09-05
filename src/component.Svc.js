@@ -1,5 +1,7 @@
 import ComponentDataModel from './component.DataModel.js'
-
+/**
+ * Description
+ */
 class ComponentSvc {
   constructor () {
     this.dataProvider = []

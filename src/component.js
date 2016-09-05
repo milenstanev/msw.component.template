@@ -7,7 +7,7 @@ import componentHtml from './component.html!text'
 import componentConfig from './component.config.js'
 import ComponentSvc from './component.Svc.js'
 import ComponentCtrl from './component.Ctrl.js'
-import componentDirective from './component.directive.js'
+import ComponentDirective from './component.Directive.js'
 
 /**
  * Module Desc .etc
@@ -50,7 +50,9 @@ component.service(`${config.COMPONENT_NAME}Svc`, ComponentSvc)
 /**
  * Component main directive
  */
-component.directive(`${config.NAMESPACE}${config.COMPONENT_NAME_CAPS}`, componentDirective)
+component.directive(`${config.NAMESPACE}${config.COMPONENT_NAME_CAPS}`, () => {
+  return new ComponentDirective()
+})
 
 export { component as default }
 

@@ -29,11 +29,15 @@
 <script>
   System.import('./index.js').then(function (reference) {
     angular.module('examlpe.core', [
-      'ui.router'
-      ,reference.default.name
+      'ui.router',
+      reference.default.name
+    ]).config([
+
     ]);
 
-    angular.bootstrap(document.body, ['examlpe.core']);
+    angular.bootstrap(document.body, [
+      reference.default.name
+    ]);
   });
 
   /*System.import('./src/component.dist.js').then(function (reference) {
