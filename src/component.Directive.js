@@ -1,18 +1,20 @@
 import componentHtml from './component.html!text'
 import ComponentCtrl from './component.Ctrl.js'
+
 /**
- * Description Directive
+ * Directive description
  */
 class ComponentDirective {
   /**
-   * Description constructor directive settings
+   * Constructor description | directive settings
+   * @param {angular.$scope} scope Description
    */
-  constructor () {
+  constructor (scope) {
     /**
-     * scope/context ...
-     * @type {boolean}
+     * Description
+     * @type {angular.$scope}
      */
-    this.scope = true
+    this.scope = scope || true
     /**
      * Controller prefix in the template
      * @type {string}
@@ -20,12 +22,12 @@ class ComponentDirective {
     this.controllerAs = 'ctrl'
     /**
      * Directive template
-     * @type {string}
+     * @type {html}
      */
     this.template = componentHtml
     /**
      * Directive controller
-     * @type {ComponentCtrl}
+     * @type {angular.Module#controller}
      */
     this.controller = ComponentCtrl
   }

@@ -1,16 +1,16 @@
 /**
- * Description
+ * @desc Description
  */
 export default class ComponentDataModel {
   /**
-   * Description
+   * @desc Description
    */
-  constructor () {
+  constructor (prop) {
     /**
-     * Description
+     * @desc Description
      * @type {string}
      */
-    this.prop = 'Property Changed'
+    this.prop = prop || 'Property Changed'
   }
 
   /**

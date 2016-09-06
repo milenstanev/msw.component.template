@@ -10,21 +10,28 @@ import ComponentCtrl from './component.Ctrl.js'
 import ComponentDirective from './component.Directive.js'
 
 /**
- * Module Desc .etc
- * @type {angular.Module | prefix.component}
+ * Angular module name: prefix.component, description: desc
+ * @type {angular.Module} AngularModule
+ *
+ * @param {string} [name] - Module name
+ * @param {Array<string>} [dependencies] - Module decencies
+ *
+ * @example usage with directive: <div prefix-component></div>
+ * @example usage with controller/template: <div ng-controller="ComponentCtrl as ctrl" ng-include="'componentHtml'"></div>
+ *
+ * @property {angular.Module#constant} componentSettings - Module settings
+ * @property {angular.Module#run}  - Put module template in $templateCache .etc
+ * @property {angular.Module#config} - Doing routes, resolve services .etc
+ * @property {angular.Module#controller} componentCtrl - Define module controller
+ * @property {angular.Module#service} componentSvc - Define module services
+ * @property {angular.Module#directive} prefix-component - Define directive which can present the module view
  */
 const component = angular.module(`${config.NAMESPACE}.${config.COMPONENT_NAME}`, [
   'ui.router'
 ])
 
-/**
- * Component config
- */
-component.constant(`${config.COMPONENT_NAME}Config`, config)
+component.constant(`${config.COMPONENT_NAME}Settings`, config)
 
-/**
- * Component run
- */
 component.run([
   '$templateCache',
   ($templateCache) => {
@@ -32,27 +39,15 @@ component.run([
   }
 ])
 
-/**
- * routes If it's necessary
- */
 component.config(componentConfig)
 
-/**
- * Component main ctrl
- */
-component.controller(`${config.COMPONENT_NAME}Ctrl`, ComponentCtrl)
+component.controller(`${config.COMPONENT_NAME_CAPS}Ctrl`, ComponentCtrl)
 
-/**
- * Component main service
- */
 component.service(`${config.COMPONENT_NAME}Svc`, ComponentSvc)
 
-/**
- * Component main directive
- */
 component.directive(`${config.NAMESPACE}${config.COMPONENT_NAME_CAPS}`, () => {
   return new ComponentDirective()
 })
 
-export { component as default }
+export default component
 

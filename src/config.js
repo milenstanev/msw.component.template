@@ -1,17 +1,17 @@
 /**
- * Name space of this component
+ * @desc Name space of this component
  * @type {string}
  */
 export const NAMESPACE = 'prefix'
 
 /**
- * Component name
+ * @desc Component name
  * @type {string}
  */
 export const COMPONENT_NAME = 'component'
 
 /**
- * Component name initial Caps
+ * @desc Component name caps
  * @type {string}
  */
 export const COMPONENT_NAME_CAPS = 'Component'

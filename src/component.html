@@ -1,4 +1,6 @@
 <div ng-if="ctrl.dataProvider.length"
      ng-repeat="item in ctrl.dataProvider">
-  {{ item.prop }}
+  {{ item.prop || item }}
 </div>
+
+<button class="margin-top-1em" ng-click="ctrl.removeData()">Remove All</button>

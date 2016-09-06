@@ -1,22 +1,31 @@
 /**
- * Description
+ * @desc Component controller constructor
  */
 class ComponentCtrl {
   /**
-   * Constructor
-   * @param {Angular Service} componentSvc description.
+   * @desc Constructor
+   * @param {angular.Module#service} componentSvc
+   * @param {angular.$scope} $scope
    */
-  //
-  constructor (componentSvc) {
+  constructor (componentSvc, $scope) {
     /**
-     * Data buffer
-     * @type {array}
+     * @desc dataProvider have to contain view data
+     * @type {angular.Module#service|DataProvider}
      */
     this.dataProvider = componentSvc.dataProvider
   }
+  /**
+   * @desc This method will remove all records from {dataProvider}
+   */
+  removeData () {
+    // this.dataProvider.removeAll()
+    this.dataProvider.removeObjectByRef(this.dataProvider[1])
+    // this.dataProvider.removeString('1')
+    // this.dataProvider.removeByObjectInObject({asd: 'asd2'})
+  }
 }
 
-ComponentCtrl.$inject = ['componentSvc']
+ComponentCtrl.$inject = ['componentSvc', '$scope']
 
 export default ComponentCtrl
 
