@@ -10,7 +10,7 @@ import ComponentCtrl from './component.Ctrl.js'
 import ComponentDirective from './component.Directive.js'
 
 /**
- * Angular module name: prefix.component, description: desc
+ * @desc Angular module name: prefix.component, description: desc
  * @type {angular.Module} AngularModule
  *
  * @param {string} [name] - Module name
@@ -25,6 +25,9 @@ import ComponentDirective from './component.Directive.js'
  * @property {angular.Module#controller} componentCtrl - Define module controller
  * @property {angular.Module#service} componentSvc - Define module services
  * @property {angular.Module#directive} prefix-component - Define directive which can present the module view
+ * @info
+ *  - The {cost} to which is assigned module instance is not good practice according good practices from @url https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#modules,
+ *    but otherwise we will lose documentation
  */
 const component = angular.module(`${config.NAMESPACE}.${config.COMPONENT_NAME}`, [
   'ui.router'
