@@ -1,3 +1,6 @@
+/**************************************************
+ *** @namespace general component settings
+ **************************************************/
 /**
  * @desc Name space of this component
  * @type {string}
@@ -13,4 +16,13 @@ export const COMPONENT_NAME = 'component'
  * @type {string}
  */
 export const COMPONENT_NAME_CAPS = 'Component'
+
+
+/**************************************************
+ *** @namespace component specifics
+ **************************************************/
+/**
+ * @desc
+ */
+// TBD
 
