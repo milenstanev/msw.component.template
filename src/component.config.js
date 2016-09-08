@@ -1,10 +1,10 @@
-function componentConfig($stateProvider, $urlRouterProvider) {
+function componentConfig ($stateProvider, $urlRouterProvider) {
 
-  //$urlRouterProvider.otherwise("/state1");
+  // $urlRouterProvider.otherwise("/state1");
 
-  //TODO: try internal routes with different hash prefixes
+  // TODO: try internal routes with different hash prefixes
 
-  /*$stateProvider
+  /* $stateProvider
     .state('state1', {
       url: "/state1",
       templateUrl: "partials/state1.html"
@@ -15,9 +15,10 @@ function componentConfig($stateProvider, $urlRouterProvider) {
       controller: function($scope) {
         $scope.items = ["A", "List", "Of", "Items"];
       }
-    });*/
+    }); */
 }
 
-componentConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
+componentConfig.$inject = ['$stateProvider', '$urlRouterProvider']
 
-export default componentConfig;
+export default componentConfig
+

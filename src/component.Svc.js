@@ -1,17 +1,53 @@
-import ComponentDataModel from './component.DataModel.js';
+import angular from 'angular'
+import DataProvider from 'DataProvider'
+import ComponentDataModel from './component.DataModel.js'
+/**
+ * ComponentSvc Referance
+ * @type {undefined|ComponentSvc}
+ */
+let svc = undefined
 
+/**
+ * ComponentSvc 
+ * @desc ComponentSvc description
+ */
 class ComponentSvc {
-  constructor() {
-    this.dataProvider = [];
+  constructor () {
+    let svc = this
 
-    this.init();
+    /**
+     * @desc viewData have to contain view data
+     * @type {DataProvider}
+     */
+    this.viewData = new DataProvider()
+
+    this.init()
   }
 
-  init() {
-    this.dataProvider.push(new ComponentDataModel());
+  /**
+   * @desc
+   *  - Instantiate the service
+   *  - Doing new instance of {ComponentDataModel} and put it in {this.viewData}
+   */
+  init () {
+    this.viewData.onPush = (data) => {
+      console.log(data)
+    }
+
+    /* this.viewData.push(new ComponentDataModel())
+    this.viewData.push(new ComponentDataModel())
+    this.viewData.push(new ComponentDataModel()) */
+
+    /* this.viewData.push('1')
+    this.viewData.push('2')
+    this.viewData.push('3') */
+
+    this.viewData.push({asd: 'asd1', qwe: 'qwe'})
+    this.viewData.push({asd: 'asd2', qwe: 'qwe'})
+    this.viewData.push({asd: 'asd3', qwe: 'qwe'})
   }
 }
 
-ComponentSvc.$inject = [];
+ComponentSvc.$inject = []
 
-export default ComponentSvc;
+export default ComponentSvc

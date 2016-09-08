@@ -16,28 +16,29 @@
 <hr>
 
 <h3>With controller and include</h3>
-<div ng-controller="componentCtrl as ctrl" ng-include="'componentHtml'"></div>
+<div ng-controller="ComponentCtrl as ctrl" ng-include="'componentHtml'"></div>
 
 <hr>
 
 <div ui-view></div>
 
 
-<script src="jspm_packages/github/angular/bower-angular@1.5.8/angular.js"></script>
-<script src="jspm_packages/github/angular-ui/ui-router@0.3.1/release/angular-ui-router.js"></script>
 <script src="jspm_packages/system.js"></script>
 <script src="config.js"></script>
 
-<!--<script src="src/component.dist.js"></script>-->
-
 <script>
+  // asdasd
   System.import('./index.js').then(function (reference) {
     angular.module('examlpe.core', [
-      'ui.router'
-      ,reference.default.name
+      'ui.router',
+      reference.default.name
+    ]).config([
+      //TODO: ui-view ...
     ]);
 
-    angular.bootstrap(document.body, ['examlpe.core']);
+    angular.bootstrap(document.body, [
+      reference.default.name
+    ]);
   });
 
   /*System.import('./src/component.dist.js').then(function (reference) {
