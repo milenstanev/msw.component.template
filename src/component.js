@@ -14,7 +14,7 @@ import ComponentDirective from './component.Directive.js'
  * @type {angular.Module} AngularModule
  *
  * @param {string} [name] - Module name
- * @param {Array<string>} [dependencies] - Module decencies
+ * @param {Array} [dependencies] - Module decencies
  *
  * @example usage with directive: <div prefix-component></div>
  * @example usage with controller/template: <div ng-controller="ComponentCtrl as ctrl" ng-include="'componentHtml'"></div>

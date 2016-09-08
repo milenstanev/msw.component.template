@@ -1,5 +1,5 @@
 /**
- * ComponentCtrl Referance
+ * ComponentCtrl reference
  * @type {undefined|ComponentCtrl}
  */
 let ctrl
