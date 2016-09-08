@@ -1,7 +1,7 @@
 import angular from 'angular'
 import 'angular-ui/ui-router'
 
-import * as config from './config.js'
+import * as config from './componetConfig.js'
 import './component.css!'
 import componentHtml from './component.html!text'
 import componentConfig from './component.config.js'
