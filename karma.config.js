@@ -1,9 +1,7 @@
 module.exports = function (config) {
-  "use strict";
-
   config.set({
 
-    basePath: "",
+    basePath: '',
 
     files: [],
 
@@ -11,32 +9,33 @@ module.exports = function (config) {
 
     jspm: {
       config: 'config.js',
-      packaged: "jspm_packages/system.js",
+      packaged: 'jspm_packages/system.js',
       serveFiles: [
-        "src/*"
+        'src/*'
       ],
       loadFiles: [
-        "src/*spec.js"
+        'src/*spec.js'
       ]
     },
 
     autoWatch: true,
 
-    frameworks: ["jspm", "jasmine"],
+    frameworks: ['jspm', 'jasmine'],
 
-    browsers: ["Chrome"],
+    browsers: ['Chrome'],
 
     plugins: [
-      "karma-jspm",
-      "karma-chrome-launcher",
-      "karma-jasmine",
-      "karma-junit-reporter"
+      'karma-jspm',
+      'karma-chrome-launcher',
+      'karma-jasmine',
+      'karma-junit-reporter'
     ],
 
     junitReporter: {
-      outputFile: "test_out/unit.xml",
-      suite: "unit"
+      outputFile: 'test_out/unit.xml',
+      suite: 'unit'
     }
 
-  });
-};
+  })
+}
+

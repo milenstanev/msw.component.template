@@ -1,19 +1,18 @@
-import angular from 'angular'
 import DataProvider from './components/DataProvider.js'
 import ComponentDataModel from './component.DataModel.js'
 /**
  * ComponentSvc Referance
  * @type {undefined|ComponentSvc}
  */
-let svc = undefined
+let svc
 
 /**
- * ComponentSvc 
+ * ComponentSvc
  * @desc ComponentSvc description
  */
 class ComponentSvc {
   constructor () {
-    let svc = this
+    svc = this
 
     /**
      * @desc viewData have to contain view data
@@ -32,6 +31,10 @@ class ComponentSvc {
   init () {
     this.viewData.onPush = (data) => {
       console.log(data)
+
+      if (!data) {
+        svc.viewData.removeString()
+      }
     }
 
     /* this.viewData.push(new ComponentDataModel())

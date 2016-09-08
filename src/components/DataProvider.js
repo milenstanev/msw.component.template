@@ -1,3 +1,4 @@
+import angular from 'angular'
 import * as helpers from './helpers.js'
 
 /**
@@ -10,7 +11,7 @@ class DataProvider extends Array {
   /**
    * @desc Remove all items from collection
    */
-  removeAll() {
+  removeAll () {
     while (this.length) {
       this.shift()
     }
@@ -20,7 +21,7 @@ class DataProvider extends Array {
   /**
    * @desc Remove string
    */
-  removeString(arg) {
+  removeString (arg) {
     let isAnyItem = this.indexOf(arg)
 
     if (isAnyItem !== -1) {
@@ -34,7 +35,7 @@ class DataProvider extends Array {
    * @desc Remove object by reference or deep copy
    * @param {Object} obj {}
    */
-  removeObjectByRef(obj) {
+  removeObjectByRef (obj) {
     let len = this.length
 
     while (len--) {
@@ -49,7 +50,7 @@ class DataProvider extends Array {
    * @param {object} obj
    * @example {prop: 'value'} from [{prop: 'value', other: 'value'}, {prop: 'value2', other: 'value2'}]
    */
-  removeByObjectInObject(obj) {
+  removeByObjectInObject (obj) {
     let itemNumber = this.findItemNumberForObjectInObject(obj)
 
     if (itemNumber) {
@@ -65,7 +66,7 @@ class DataProvider extends Array {
    * @example {prop: 'value'} from [{prop: 'value', other: 'value'}, {prop: 'value2', other: 'value2'}]
    * @returns {number}
    */
-  findItemNumberForObjectInObject(obj) {
+  findItemNumberForObjectInObject (obj) {
     let itemNumber = helpers.findItemNumberForObjectInObject.call(this, obj)
 
     helpers
@@ -77,13 +78,13 @@ class DataProvider extends Array {
    * It's defined to be overwrite if it's necessary
    * @abstract
    */
-  onPush(data) { }
+  onPush (data) { }
 
   /**
    * @desc It's defined for abstract method {onPush}
    * @param data
    */
-  push(data) {
+  push (data) {
     super.push(data)
     this.onPush(data)
   }
