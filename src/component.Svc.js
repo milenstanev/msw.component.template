@@ -1,5 +1,5 @@
 import angular from 'angular'
-import DataProvider from 'DataProvider'
+import DataProvider from './components/DataProvider.js'
 import ComponentDataModel from './component.DataModel.js'
 /**
  * ComponentSvc Referance
