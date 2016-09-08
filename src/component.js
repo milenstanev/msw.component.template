@@ -25,7 +25,7 @@ import ComponentDirective from './component.Directive.js'
  * @property {angular.Module#controller} componentCtrl - Define module controller
  * @property {angular.Module#service} componentSvc - Define module services
  * @property {angular.Module#directive} prefix-component - Define directive which can present the module view
- * @info
+ * @info TODO: change it somehow
  *  - The {cost} to which is assigned module instance is not good practice according good practices from @url https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#modules,
  *    but otherwise we will lose documentation
  */
