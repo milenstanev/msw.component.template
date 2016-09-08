@@ -1,7 +1,7 @@
 import DataProvider from './components/DataProvider.js'
 import ComponentDataModel from './component.DataModel.js'
 /**
- * ComponentSvc Referance
+ * ComponentSvc reference
  * @type {undefined|ComponentSvc}
  */
 let svc
