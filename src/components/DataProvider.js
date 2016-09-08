@@ -1,4 +1,5 @@
 import angular from 'angular'
+// TODO: component at helpers level
 import * as helpers from './helpers.js'
 
 /**

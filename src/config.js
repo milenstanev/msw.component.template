@@ -22,7 +22,10 @@ export const COMPONENT_NAME_CAPS = 'Component'
  *** @namespace component specifics
  **************************************************/
 /**
- * @desc
+ * @desc Define which presentation framework will be used. @options: - angular/material, - mgcrea/angular-strap
+ *  - Angular Material | angular/material
+ *  - Angular Strap    | mgcrea/angular-strap
+ * @TODO create make file or something
  */
-// TBD
+export const UI_FRAMEWORK = 'angular/material' // github: mgcrea/angular-strap, github: angular/material
 

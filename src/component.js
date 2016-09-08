@@ -33,6 +33,7 @@ const component = angular.module(`${config.NAMESPACE}.${config.COMPONENT_NAME}`,
   'ui.router'
 ])
 
+// TODO: overwrite via parent component config, in order to make chain configuration.
 component.constant(`${config.COMPONENT_NAME}Settings`, config)
 
 component.run([
