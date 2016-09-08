@@ -1,10 +1,10 @@
 import angular from 'angular'
 import 'angular-ui/ui-router'
 
-import * as config from './componetConfig.js'
+import * as componentConfig from './componentConfig.js'
 import './component.css!'
 import componentHtml from './component.html!text'
-import componentConfig from './component.config.js'
+import componentRoutes from './component.config.js'
 import ComponentSvc from './component.Svc.js'
 import ComponentCtrl from './component.Ctrl.js'
 import ComponentDirective from './component.Directive.js'
@@ -29,27 +29,28 @@ import ComponentDirective from './component.Directive.js'
  *  - The {cost} to which is assigned module instance is not good practice according good practices from @url https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#modules,
  *    but otherwise we will lose documentation
  */
-const component = angular.module(`${config.NAMESPACE}.${config.COMPONENT_NAME}`, [
+const component = angular.module(`${componentConfig.NAMESPACE}.${componentConfig.COMPONENT_NAME}`, [
   'ui.router'
 ])
 
-// TODO: overwrite via parent component config, in order to make chain configuration.
-component.constant(`${config.COMPONENT_NAME}Settings`, config)
+// TODO: overwrite via parent component componentConfig, in order to make chain configuration.
+//debugger
+component.constant(`${componentConfig.COMPONENT_NAME}Settings`, componentConfig)
 
 component.run([
   '$templateCache',
   ($templateCache) => {
-    $templateCache.put(`${config.COMPONENT_NAME}Html`, componentHtml)
+    $templateCache.put(`${componentConfig.COMPONENT_NAME}Html`, componentHtml)
   }
 ])
 
-component.config(componentConfig)
+component.config(componentRoutes)
 
-component.controller(`${config.COMPONENT_NAME_CAPS}Ctrl`, ComponentCtrl)
+component.controller(`${componentConfig.COMPONENT_NAME_CAPS}Ctrl`, ComponentCtrl)
 
-component.service(`${config.COMPONENT_NAME}Svc`, ComponentSvc)
+component.service(`${componentConfig.COMPONENT_NAME}Svc`, ComponentSvc)
 
-component.directive(`${config.NAMESPACE}${config.COMPONENT_NAME_CAPS}`, () => {
+component.directive(`${componentConfig.NAMESPACE}${componentConfig.COMPONENT_NAME_CAPS}`, () => {
   return new ComponentDirective()
 })
 

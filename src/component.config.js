@@ -1,4 +1,4 @@
-function componentConfig ($stateProvider, $urlRouterProvider) {
+function componentRoutes ($stateProvider, $urlRouterProvider) {
 
   // $urlRouterProvider.otherwise("/state1");
 
@@ -18,7 +18,7 @@ function componentConfig ($stateProvider, $urlRouterProvider) {
     }); */
 }
 
-componentConfig.$inject = ['$stateProvider', '$urlRouterProvider']
+componentRoutes.$inject = ['$stateProvider', '$urlRouterProvider']
 
-export default componentConfig
+export default componentRoutes
 
