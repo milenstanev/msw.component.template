@@ -1,5 +1,8 @@
+import * as componentConfig from './componentConfig.js'
+
 import DataProvider from './components/DataProvider.js'
 import ComponentDataModel from './component.DataModel.js'
+
 /**
  * ComponentSvc reference
  * @type {undefined|ComponentSvc}
@@ -11,8 +14,9 @@ let svc
  * @desc ComponentSvc description
  */
 class ComponentSvc {
-  constructor () {
+  constructor ($q) {
     svc = this
+    this.$q = $q
 
     /**
      * @desc viewData have to contain view data
@@ -51,6 +55,6 @@ class ComponentSvc {
   }
 }
 
-ComponentSvc.$inject = []
+ComponentSvc.$inject = ['$q']
 
 export default ComponentSvc

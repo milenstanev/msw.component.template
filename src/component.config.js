@@ -1,21 +1,19 @@
+import * as componentConfig from './componentConfig.js'
+
+/**
+ * @example Result will be: <prefix-component></prefix-component>
+ * @type {string}
+ */
+const directive = `<${componentConfig.DIRECTIVE_NAME}></${componentConfig.DIRECTIVE_NAME}>`
+
 function componentRoutes ($stateProvider, $urlRouterProvider) {
-
-  // $urlRouterProvider.otherwise("/state1");
-
-  // TODO: try internal routes with different hash prefixes
-
-  /* $stateProvider
-    .state('state1', {
-      url: "/state1",
-      templateUrl: "partials/state1.html"
+  $stateProvider
+    .state('home', {
+      url: '/home',
+      template: directive
     })
-    .state('state1.list', {
-      url: "/list",
-      templateUrl: "partials/state1.list.html",
-      controller: function($scope) {
-        $scope.items = ["A", "List", "Of", "Items"];
-      }
-    }); */
+
+  //return $urlRouterProvider.otherwise('/home')
 }
 
 componentRoutes.$inject = ['$stateProvider', '$urlRouterProvider']

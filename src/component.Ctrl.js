@@ -13,7 +13,11 @@ class ComponentCtrl {
    * @param {angular.Module#service} componentSvc - Contain {DataProvider} instance which wrapp view data
    * @param {angular.$scope} $scope
    */
-  constructor (componentSvc, $scope) {
+  constructor (componentSvc) {
+    /**
+     * @desc Reference to context
+     * @type {ComponentCtrl}
+     */
     ctrl = this
 
     /**
@@ -23,6 +27,8 @@ class ComponentCtrl {
      * @type {DataProvider}
      */
     this.viewData = componentSvc.viewData
+
+    this.birthday = new Date()
   }
   /**
    * @desc This method will remove all records from {{ctrl.viewData}}
@@ -35,7 +41,7 @@ class ComponentCtrl {
   }
 }
 
-ComponentCtrl.$inject = ['componentSvc', '$scope']
+ComponentCtrl.$inject = ['componentSvc']
 
 export default ComponentCtrl
 

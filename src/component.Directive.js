@@ -1,5 +1,10 @@
-import componentHtml from './component.html!text'
-import ComponentCtrl from './component.Ctrl.js'
+import * as componentConfig from './componentConfig.js'
+
+/**
+ * @desc TODO
+ * @type {{}}
+ */
+let scope = {}
 
 /**
  * Directive description
@@ -7,14 +12,14 @@ import ComponentCtrl from './component.Ctrl.js'
 class ComponentDirective {
   /**
    * Constructor description | directive settings
-   * @param {angular.$scope} scope Description
    */
-  constructor (scope) {
+  constructor () {
     /**
      * Description
      * @type {angular.$scope}
      */
-    this.scope = scope || true
+    this.scope = scope
+
     /**
      * Controller prefix in the template
      * @type {string}
@@ -24,12 +29,14 @@ class ComponentDirective {
      * Directive template
      * @type {html}
      */
-    this.template = componentHtml
+    this.templateUrl = componentConfig.COMPONENT_TEMPLATE_NAME
     /**
      * Directive controller
      * @type {angular.Module#controller}
      */
-    this.controller = ComponentCtrl
+    this.controller = componentConfig.CONTROLLER_NAME
+
+    this.link = (scope, element, attrs, ctrl) => {}
   }
 }
 

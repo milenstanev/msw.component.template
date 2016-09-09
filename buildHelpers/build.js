@@ -1,7 +1,6 @@
-const fs = require('fs');
-const Builder = require('systemjs-builder');
-const gulp = require('gulp');
-const exec = require('gulp-exec');
+const fs = require('fs')
+const Builder = require('systemjs-builder')
+const gulp = require('gulp')
 
 /**
  * Define baseUrl
@@ -9,11 +8,11 @@ const exec = require('gulp-exec');
  * .. -> debug, run as node file
  * @type {string}
  */
-const baseUrl = '.';
+const baseUrl = '.'
 /**
  * Configure builder paths
  */
-const builder = new Builder(`${baseUrl}/`, `${baseUrl}/config.js`);
+const builder = new Builder(`${baseUrl}/`, `${baseUrl}/config.js`)
 
 builder.config({
   meta: {
@@ -22,10 +21,24 @@ builder.config({
     },
     'angular-ui/ui-router': {
       build: false
+    },
+    'angular-sanitize': {
+      build: false
+    },
+    'angular-material': {
+      build: false
+    },
+    'text': {
+      build: false
+    },
+    'css': {
+      build: false
+    },
+    'ocombe/ocLazyLoad': {
+      build: false
     }
   }
-});
-
+})
 
 builder
   .buildStatic(
@@ -34,13 +47,13 @@ builder
     {
       minify: true,
       sourceMaps: true,
-      format: 'amd', //cjs // es6 without bundle
+      format: 'cjs', // cjs // es6 without bundle
       runtime: false
     }
   ).then(function() {
-    console.log('Build complete\n');
-  })
+  console.log('Build complete\n')
+})
   .catch(function(err) {
-    console.log('Build error\n');
-    console.log(err);
-  });
+    console.log('Build error\n')
+    console.log(err)
+  })

@@ -14,14 +14,35 @@ System.config({
   },
 
   map: {
+    "matirial-html": "src/templates/angular-material/template-name-matirial.html",
+    "matirial-css": "src/templates/angular-material/template-name-matirial.css",
+
     "angular": "github:angular/bower-angular@1.5.8",
+    "angular-material": "github:angular/bower-material@1.1.1",
     "angular-mocks": "npm:angular-mocks@1.5.8",
+    "angular-sanitize": "npm:angular-sanitize@1.5.8",
     "angular-ui/ui-router": "github:angular-ui/ui-router@0.3.1",
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.7",
-    "css": "github:systemjs/plugin-css@0.1.26",
+    "css": "github:systemjs/plugin-css@0.1.27",
+    "ocombe/ocLazyLoad": "github:ocombe/ocLazyLoad@1.0.9",
     "text": "github:systemjs/plugin-text@0.0.8",
+    "github:angular-ui/ui-router@0.3.1": {
+      "angular": "github:angular/bower-angular@1.5.8"
+    },
+    "github:angular/bower-angular-animate@1.5.8": {
+      "angular": "github:angular/bower-angular@1.5.8"
+    },
+    "github:angular/bower-angular-aria@1.5.8": {
+      "angular": "github:angular/bower-angular@1.5.8"
+    },
+    "github:angular/bower-material@1.1.1": {
+      "angular": "github:angular/bower-angular@1.5.8",
+      "angular-animate": "github:angular/bower-angular-animate@1.5.8",
+      "angular-aria": "github:angular/bower-angular-aria@1.5.8",
+      "css": "github:systemjs/plugin-css@0.1.27"
+    },
     "github:jspm/nodelibs-assert@0.1.0": {
       "assert": "npm:assert@1.4.1"
     },
@@ -32,7 +53,7 @@ System.config({
       "path-browserify": "npm:path-browserify@0.0.0"
     },
     "github:jspm/nodelibs-process@0.1.2": {
-      "process": "npm:process@0.11.8"
+      "process": "npm:process@0.11.9"
     },
     "github:jspm/nodelibs-util@0.1.0": {
       "util": "npm:util@0.10.3"
@@ -69,7 +90,7 @@ System.config({
     "npm:path-browserify@0.0.0": {
       "process": "github:jspm/nodelibs-process@0.1.2"
     },
-    "npm:process@0.11.8": {
+    "npm:process@0.11.9": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",
       "fs": "github:jspm/nodelibs-fs@0.1.2",
       "vm": "github:jspm/nodelibs-vm@0.1.0"

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Title</title>
 </head>
-<body>
+<body ng-cloak>
 
 <h1>Page example</h1>
 
@@ -22,15 +22,13 @@
 
 <div ui-view></div>
 
-
+<script src="jspm_packages/github/angular/bower-angular@1.5.8/angular.min.js"></script>
 <script src="jspm_packages/system.js"></script>
 <script src="config.js"></script>
 
 <script>
-  // asdasd
   System.import('./index.js').then(function (reference) {
     angular.module('examlpe.core', [
-      'ui.router',
       reference.default.name
     ]).config([
       //TODO: ui-view ...
@@ -40,12 +38,6 @@
       reference.default.name
     ]);
   });
-
-  /*System.import('./src/component.dist.js').then(function (reference) {
-    System.import('./dev.app/app.js').then(function (reference) {
-      angular.bootstrap(document.body, [reference.default.name]);
-    });
-  });*/
 </script>
 </body>
 </html>
