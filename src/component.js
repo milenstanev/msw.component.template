@@ -1,18 +1,18 @@
-import angular from 'angular'
-import 'angular-ui/ui-router'
-import 'angular-sanitize'
-import 'ocombe/ocLazyLoad'
+import angular from 'angular';
+import 'angular-ui/ui-router';
+import 'angular-sanitize';
+import 'ocombe/ocLazyLoad';
 
 // region angular-material
-import 'angular-material'
-import componentHtml from './templates/angular-material/template.js'
+import 'angular-material';
+import componentHtml from './templates/angular-material/template.js';
 // endregion
 
-import * as componentConfig from './componentConfig.js'
-import componentRoutes from './component.config.js'
-import ComponentSvc from './component.Svc.js'
-import ComponentCtrl from './component.Ctrl.js'
-import ComponentDirective from './component.Directive.js'
+import * as componentConfig from './componentConfig.js';
+import componentRoutes from './component.config.js';
+import ComponentSvc from './component.Svc.js';
+import ComponentCtrl from './component.Ctrl.js';
+import ComponentDirective from './component.Directive.js';
 
 /**
  * @desc Angular module name: prefix.component, description: desc
@@ -39,36 +39,36 @@ const component = angular.module(`${componentConfig.NAMESPACE}.${componentConfig
   'ngSanitize',
   'oc.lazyLoad',
   'ngMaterial' // material
-])
+]);
 
 /**
  * @desc Doing overwrite/setting about UI.
  * @type {string}
  */
-component.constant(componentConfig.COMPONENT_CONFIG_NAME, componentConfig)
+component.constant(componentConfig.COMPONENT_CONFIG_NAME, componentConfig);
 
 component.run([
   '$templateCache',
   ($templateCache) => {
-    $templateCache.put(componentConfig.COMPONENT_TEMPLATE_NAME, componentHtml)
+    $templateCache.put(componentConfig.COMPONENT_TEMPLATE_NAME, componentHtml);
   }
-])
+]);
 
-component.config(componentRoutes)
+component.config(componentRoutes);
 
-component.controller(componentConfig.CONTROLLER_NAME, ComponentCtrl)
+component.controller(componentConfig.CONTROLLER_NAME, ComponentCtrl);
 
-component.service(componentConfig.SERVICE_NAME, ComponentSvc)
+component.service(componentConfig.SERVICE_NAME, ComponentSvc);
 
 component.directive(componentConfig.DIRECTIVE_NAME_CAPS, [
   () => {
-    return new ComponentDirective()
+    return new ComponentDirective();
   }
-])
+]);
 
 /* angular.bootstrap(document.body, [
   `${componentConfig.NAMESPACE}.${componentConfig.COMPONENT_NAME}`
 ]) */
 
-export default component
+export default component;
 

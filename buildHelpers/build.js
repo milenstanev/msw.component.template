@@ -1,6 +1,6 @@
-const fs = require('fs')
-const Builder = require('systemjs-builder')
-const gulp = require('gulp')
+const fs = require('fs');
+const Builder = require('systemjs-builder');
+const gulp = require('gulp');
 
 /**
  * Define baseUrl
@@ -8,11 +8,11 @@ const gulp = require('gulp')
  * .. -> debug, run as node file
  * @type {string}
  */
-const baseUrl = '.'
+const baseUrl = '.';
 /**
  * Configure builder paths
  */
-const builder = new Builder(`${baseUrl}/`, `${baseUrl}/config.js`)
+const builder = new Builder(`${baseUrl}/`, `${baseUrl}/config.js`);
 
 builder.config({
   meta: {
@@ -38,7 +38,7 @@ builder.config({
       build: false
     }
   }
-})
+});
 
 builder
   .buildStatic(
@@ -51,9 +51,9 @@ builder
       runtime: false
     }
   ).then(function() {
-  console.log('Build complete\n')
+  console.log('Build complete\n');
 })
   .catch(function(err) {
-    console.log('Build error\n')
-    console.log(err)
-  })
+    console.log('Build error\n');
+    console.log(err);
+  });

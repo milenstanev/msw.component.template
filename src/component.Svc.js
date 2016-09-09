@@ -1,13 +1,7 @@
-import * as componentConfig from './componentConfig.js'
+import * as componentConfig from './componentConfig.js';
 
-import DataProvider from './components/DataProvider.js'
-import ComponentDataModel from './component.DataModel.js'
-
-/**
- * ComponentSvc reference
- * @type {undefined|ComponentSvc}
- */
-let svc
+import DataProvider from './components/DataProvider.js';
+import ComponentDataModel from './component.DataModel.js';
 
 /**
  * ComponentSvc
@@ -15,16 +9,15 @@ let svc
  */
 class ComponentSvc {
   constructor ($q) {
-    svc = this
-    this.$q = $q
+    this.$q = $q;
 
     /**
      * @desc viewData have to contain view data
      * @type {DataProvider}
      */
-    this.viewData = new DataProvider()
+    this.viewData = new DataProvider();
 
-    this.init()
+    this.init();
   }
 
   /**
@@ -34,12 +27,12 @@ class ComponentSvc {
    */
   init () {
     this.viewData.onPush = (data) => {
-      console.log(data)
+      console.log(data);
 
       if (!data) {
-        svc.viewData.removeString()
+        this.viewData.removeString();
       }
-    }
+    };
 
     /* this.viewData.push(new ComponentDataModel())
     this.viewData.push(new ComponentDataModel())
@@ -49,12 +42,12 @@ class ComponentSvc {
     this.viewData.push('2')
     this.viewData.push('3') */
 
-    this.viewData.push({asd: 'asd1', qwe: 'qwe'})
-    this.viewData.push({asd: 'asd2', qwe: 'qwe'})
-    this.viewData.push({asd: 'asd3', qwe: 'qwe'})
+    this.viewData.push({asd: 'asd1', qwe: 'qwe'});
+    this.viewData.push({asd: 'asd2', qwe: 'qwe'});
+    this.viewData.push({asd: 'asd3', qwe: 'qwe'});
   }
 }
 
-ComponentSvc.$inject = ['$q']
+ComponentSvc.$inject = ['$q'];
 
-export default ComponentSvc
+export default ComponentSvc;

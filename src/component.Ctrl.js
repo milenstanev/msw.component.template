@@ -1,10 +1,4 @@
 /**
- * ComponentCtrl reference
- * @type {undefined|ComponentCtrl}
- */
-let ctrl
-
-/**
  * @desc Component controller constructor
  */
 class ComponentCtrl {
@@ -15,33 +9,27 @@ class ComponentCtrl {
    */
   constructor (componentSvc) {
     /**
-     * @desc Reference to context
-     * @type {ComponentCtrl}
-     */
-    ctrl = this
-
-    /**
      * @desc viewData
      *  - Contain
      * @property {DataProvider} Name - Description of the {DataProvider}
      * @type {DataProvider}
      */
-    this.viewData = componentSvc.viewData
+    this.viewData = componentSvc.viewData;
 
-    this.birthday = new Date()
+    this.birthday = new Date();
   }
   /**
    * @desc This method will remove all records from {{ctrl.viewData}}
    */
   removeData () {
     // this.viewData.removeAll()
-    ctrl.viewData.removeObjectByRef(ctrl.viewData[1])
+    this.viewData.removeObjectByRef(this.viewData[1]);
     // this.viewData.removeString('1')
     // this.viewData.removeByObjectInObject({asd: 'asd2'})
   }
 }
 
-ComponentCtrl.$inject = ['componentSvc']
+ComponentCtrl.$inject = ['componentSvc'];
 
-export default ComponentCtrl
+export default ComponentCtrl;
 

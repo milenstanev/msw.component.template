@@ -10,7 +10,7 @@ export default class ComponentDataModel {
      * @desc Description
      * @type {string}
      */
-    this.prop = prop || 'Property Changed'
+    this.prop = prop || 'Property Changed';
   }
 
   /**
@@ -19,8 +19,8 @@ export default class ComponentDataModel {
    */
   static getSomethingMethod () {
     // noinspection UnnecessaryLocalVariableJS
-    const STR = 'String'
+    const STR = 'String';
 
-    return STR
+    return STR;
   }
 }

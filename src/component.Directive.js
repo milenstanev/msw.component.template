@@ -1,10 +1,10 @@
-import * as componentConfig from './componentConfig.js'
+import * as componentConfig from './componentConfig.js';
 
 /**
  * @desc TODO
  * @type {{}}
  */
-let scope = {}
+let scope = {};
 
 /**
  * Directive description
@@ -18,27 +18,27 @@ class ComponentDirective {
      * Description
      * @type {angular.$scope}
      */
-    this.scope = scope
+    this.scope = scope;
 
     /**
      * Controller prefix in the template
      * @type {string}
      */
-    this.controllerAs = 'ctrl'
+    this.controllerAs = 'ctrl';
     /**
      * Directive template
      * @type {html}
      */
-    this.templateUrl = componentConfig.COMPONENT_TEMPLATE_NAME
+    this.templateUrl = componentConfig.COMPONENT_TEMPLATE_NAME;
     /**
      * Directive controller
      * @type {angular.Module#controller}
      */
-    this.controller = componentConfig.CONTROLLER_NAME
+    this.controller = componentConfig.CONTROLLER_NAME;
 
-    this.link = (scope, element, attrs, ctrl) => {}
+    this.link = (scope, element, attrs, ctrl) => {};
   }
 }
 
-export default ComponentDirective
+export default ComponentDirective;
 
