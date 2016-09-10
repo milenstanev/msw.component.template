@@ -4,7 +4,7 @@
  * The are should be only those dependencies: 'config', 'component' and 'angular-mocks'.
  *  - If they are more, for sure something going wrong!
  */
-import * as config from './componentConfig.js';
+import * as config from './component.config/componentConfig.js';
 import { default as component } from './component.js';
 import 'angular-mocks';
 

@@ -1,4 +1,4 @@
-import * as componentConfig from './componentConfig.js';
+import * as componentConfig from './constants.js';
 
 /**
  * @example Result will be: <prefix-component></prefix-component>
@@ -21,5 +21,8 @@ function componentRoutes ($stateProvider) {
 
 componentRoutes.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-export default componentRoutes;
+export {
+  componentRoutes,
+  componentConfig
+};
 

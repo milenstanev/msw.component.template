@@ -1,7 +1,9 @@
 import angular from 'angular';
 import 'mgcrea/angular-strap';
 import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css!';
-import * as componentConfig from '../../componentConfig.js';
+import {
+  componentConfig
+} from '../../component.config/component.config.js';
 
 import componentHtml from './template-name-bootstrap.html!text';
 import componentCss from './template-name-bootstrap.css!';

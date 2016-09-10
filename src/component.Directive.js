@@ -1,4 +1,4 @@
-import * as componentConfig from './componentConfig.js';
+import { componentConfig } from './component.config/component.config.js';
 
 /**
  * @desc TODO

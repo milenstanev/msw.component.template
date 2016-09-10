@@ -34,7 +34,7 @@ class ViewDataModel {
     this.viewData = new DataProvider();
   }
   /**
-   * Helper method ....
+   * Helper method, tobe described
    * @returns {ViewItemDataModel}
    */
   getViewItemDataModel() {

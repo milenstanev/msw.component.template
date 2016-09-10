@@ -3,16 +3,18 @@ import 'angular-ui/ui-router';
 import 'angular-sanitize';
 import 'angular/bower-angular-animate';
 
-import * as componentConfig from './componentConfig.js';
-import componentRoutes from './component.config.js';
+import {
+  componentRoutes, // routes
+  componentConfig  // configure names .etc
+} from './component.config/component.config.js';
 import ComponentSvc from './component.Svc.js';
 import ComponentCtrl from './component.Ctrl.js';
 import ComponentDirective from './component.Directive.js';
 
 //region templates
-/** angular-material */
+/* angular-material */
 import componentTemplate from './component.templates/angular-material/template-material.js';
-/** angular-strap */
+/* angular-strap */
 // import componentTemplate from './component.templates/angular-strap/template-bootstrap.js';
 //endregion
 

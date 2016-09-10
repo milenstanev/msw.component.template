@@ -1,6 +1,4 @@
-import angular from 'angular';
 import DataProvider from './component.components/DataProvider.js';
-import ComponentDataModel from './component.DataModel.js';
 import viewDataModel from './component.templates/shared/component.template.ViewDataModel.js';
 
 /**
@@ -99,7 +97,7 @@ class ComponentSvc {
     apiData.map(
       (apiItem) => {
         dataBuffer = viewDataModel.getViewItemDataModel();
-
+        /* Depends on api response! */
         dataBuffer.title = apiItem.itemTitle;
         dataBuffer.description = apiItem.itemDescription;
         dataBuffer.isActive = apiItem.isEnabled;

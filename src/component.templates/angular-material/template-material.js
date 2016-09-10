@@ -1,6 +1,8 @@
 import angular from 'angular';
 import 'angular-material';
-import * as componentConfig from '../../componentConfig.js';
+import {
+  componentConfig
+} from '../../component.config/component.config.js';
 
 import componentHtml from './template-name-material.html!text';
 import componentCss from './template-name-material.css!';
