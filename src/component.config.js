@@ -4,13 +4,16 @@ import * as componentConfig from './componentConfig.js';
  * @example Result will be: <prefix-component></prefix-component>
  * @type {string}
  */
-const directive = `<${componentConfig.DIRECTIVE_NAME}></${componentConfig.DIRECTIVE_NAME}>`;
-
+const directiveStr = `<${componentConfig.DIRECTIVE_NAME}></${componentConfig.DIRECTIVE_NAME}>`;
+/**
+ * @type {Function} - {angular.Module#constant} resource
+ * @param $stateProvider
+ */
 function componentRoutes ($stateProvider) {
   $stateProvider
     .state('home', {
       url: '/home',
-      template: directive
+      template: directiveStr
     });
 
   //return $urlRouterProvider.otherwise('/home')
