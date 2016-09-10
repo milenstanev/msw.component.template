@@ -1,4 +1,4 @@
-import DataProvider from './component.components/DataProvider.js';
+import DataProvider from './components/DataProvider.js';
 import viewDataModel from './component.templates/shared/component.template.ViewDataModel.js';
 
 /**

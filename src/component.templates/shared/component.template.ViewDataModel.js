@@ -1,4 +1,4 @@
-import DataProvider from '../../component.components/DataProvider.js';
+import DataProvider from '../../components/DataProvider.js';
 /**
  * @type {class}
  * @desc TODO...
