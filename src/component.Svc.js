@@ -27,8 +27,6 @@ class ComponentSvc {
    */
   init () {
     this.viewData.onPush = (data) => {
-      console.log(data);
-
       if (!data) {
         this.viewData.removeString();
       }
