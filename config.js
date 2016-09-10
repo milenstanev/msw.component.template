@@ -27,7 +27,6 @@ System.config({
     "matirial-css": "src/component.templates/angular-material/template-name-matirial.css",
     "matirial-html": "src/component.templates/angular-material/template-name-matirial.html",
     "mgcrea/angular-strap": "github:mgcrea/angular-strap@2.3.9",
-    "ocombe/ocLazyLoad": "github:ocombe/ocLazyLoad@1.0.9",
     "text": "github:systemjs/plugin-text@0.0.8",
     "github:angular-ui/ui-router@0.3.1": {
       "angular": "github:angular/bower-angular@1.5.8"
