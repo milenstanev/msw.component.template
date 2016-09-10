@@ -24,7 +24,7 @@
   "scripts": {
     "test": "./node_modules/.bin/karma start karma.config.js",
     "postinstall": "jspm install -y",
-    "start-dev": "node buildHelpers/start.dev.js",
+    "start-dev": "node util/start.dev.js",
     "build": "node buildHelpers/build.js",
     "jspm-link": "npm run-script esdoc && jspm link github:milenstanev/msw.component.template -y",
     "esdoc": "./node_modules/.bin/esdoc -c esdoc.json",
