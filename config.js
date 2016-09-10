@@ -14,18 +14,19 @@ System.config({
   },
 
   map: {
-    "matirial-html": "src/templates/angular-material/template-name-matirial.html",
-    "matirial-css": "src/templates/angular-material/template-name-matirial.css",
-
     "angular": "github:angular/bower-angular@1.5.8",
     "angular-material": "github:angular/bower-material@1.1.1",
     "angular-mocks": "npm:angular-mocks@1.5.8",
     "angular-sanitize": "npm:angular-sanitize@1.5.8",
     "angular-ui/ui-router": "github:angular-ui/ui-router@0.3.1",
+    "angular/bower-angular-animate": "github:angular/bower-angular-animate@1.5.8",
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "core-js": "npm:core-js@1.2.7",
     "css": "github:systemjs/plugin-css@0.1.27",
+    "matirial-css": "src/component.templates/angular-material/template-name-matirial.css",
+    "matirial-html": "src/component.templates/angular-material/template-name-matirial.html",
+    "mgcrea/angular-strap": "github:mgcrea/angular-strap@2.3.9",
     "ocombe/ocLazyLoad": "github:ocombe/ocLazyLoad@1.0.9",
     "text": "github:systemjs/plugin-text@0.0.8",
     "github:angular-ui/ui-router@0.3.1": {
@@ -60,6 +61,9 @@ System.config({
     },
     "github:jspm/nodelibs-vm@0.1.0": {
       "vm-browserify": "npm:vm-browserify@0.0.4"
+    },
+    "github:mgcrea/angular-strap@2.3.9": {
+      "angular": "github:angular/bower-angular@1.5.8"
     },
     "npm:assert@1.4.1": {
       "assert": "github:jspm/nodelibs-assert@0.1.0",

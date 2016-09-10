@@ -1,18 +1,20 @@
 import angular from 'angular';
 import 'angular-ui/ui-router';
 import 'angular-sanitize';
-import 'ocombe/ocLazyLoad';
-
-// region angular-material
-import 'angular-material';
-import componentHtml from './templates/angular-material/template.js';
-// endregion
+import 'angular/bower-angular-animate';
 
 import * as componentConfig from './componentConfig.js';
 import componentRoutes from './component.config.js';
 import ComponentSvc from './component.Svc.js';
 import ComponentCtrl from './component.Ctrl.js';
 import ComponentDirective from './component.Directive.js';
+
+//region templates
+/** angular-material */
+import componentTemplate from './component.templates/angular-material/template-material.js';
+/** angular-strap */
+// import componentTemplate from './component.templates/angular-strap/template-bootstrap.js';
+//endregion
 
 /**
  * @desc Angular module name: prefix.component, description: desc
@@ -37,8 +39,8 @@ import ComponentDirective from './component.Directive.js';
 const component = angular.module(`${componentConfig.NAMESPACE}.${componentConfig.COMPONENT_NAME}`, [
   'ui.router',
   'ngSanitize',
-  'oc.lazyLoad',
-  'ngMaterial' // material
+  'ngAnimate',
+  componentTemplate.name
 ]);
 
 /**
@@ -46,13 +48,6 @@ const component = angular.module(`${componentConfig.NAMESPACE}.${componentConfig
  * @type {string}
  */
 component.constant(componentConfig.COMPONENT_CONFIG_NAME, componentConfig);
-
-component.run([
-  '$templateCache',
-  ($templateCache) => {
-    $templateCache.put(componentConfig.COMPONENT_TEMPLATE_NAME, componentHtml);
-  }
-]);
 
 component.config(componentRoutes);
 
