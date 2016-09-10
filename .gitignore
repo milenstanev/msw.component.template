@@ -4,3 +4,5 @@
 /.idea/
 /npm-debug.log
 /esdoc/
+/index.dist.js
+/index.dist.js.map
