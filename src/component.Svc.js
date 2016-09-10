@@ -1,5 +1,3 @@
-import * as componentConfig from './componentConfig.js';
-
 import DataProvider from './components/DataProvider.js';
 import ComponentDataModel from './component.DataModel.js';
 
